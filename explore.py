@@ -6,26 +6,27 @@ import folium
 from streamlit_folium import folium_static
 import json
 
-st.set_page_config(page_title='Olympic Maniac')
-st.title("Olympic Maniac")
-st.header('Country Medal Progression by Year')
 
-def display_top_country(df):
+
+
+
+def show_explore_page():
+    st.title("Olympic Maniac")
+    st.subheader('###Country Medal Progression by Year')
+    def display_top_country(df):
     # Sum medals for each country over the years
-    total = df.sum(axis=0)
-    max_name = df.sum(axis=0).idxmax()
-    # Display the country name and the total medals
-    st.metric("Country with Most total Medals", max_name, f"{int(total[max_name])} Medals")
+        total = df.sum(axis=0)
+        max_name = df.sum(axis=0).idxmax()
+        # Display the country name and the total medals
+        st.metric("Country with Most total Medals", max_name, f"{int(total[max_name])} Medals")
 
-def modify_df(df):
-    df_melted = df.melt(id_vars='Country', var_name='Year', value_name='total_medal')
-    # Convert 'Year' column to integer type
-    df_melted['Year'] = df_melted['Year'].astype(int)
-    # Pivot the DataFrame to wide format
-    df_pivot = df_melted.pivot(index='Year', columns='Country', values='total_medal')
-    return df_pivot
-
-def show_explore():
+    def modify_df(df):
+        df_melted = df.melt(id_vars='Country', var_name='Year', value_name='total_medal')
+        # Convert 'Year' column to integer type
+        df_melted['Year'] = df_melted['Year'].astype(int)
+        # Pivot the DataFrame to wide format
+        df_pivot = df_melted.pivot(index='Year', columns='Country', values='total_medal')
+        return df_pivot
     # Load Dataframe
     df = pd.read_csv('/Users/mori/Desktop/Summer 2024/olympics-prediction/cumulative_medals.csv')
 
@@ -80,5 +81,4 @@ def show_explore():
     # Display the map in Streamlit
     folium_static(m)
 
-# Call the show_explore function
-show_explore()
+
