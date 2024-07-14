@@ -1,81 +1,69 @@
-Olympics Medal Prediction Project
-A data science project aimed at predicting the medal counts for different countries in the Olympics using various machine learning techniques. This project involves data preprocessing, feature engineering, model training, and evaluation.
+# Olympic Maniac
 
-Motivation
-The motivation behind this project is to leverage historical Olympic data and advanced machine learning techniques to predict future medal counts for different countries. This can help in understanding trends and factors influencing the performance of countries in the Olympics.
+"Olympic Maniac" is an interactive platform for Olympic enthusiasts to engage with a comprehensive dataset spanning over the past 120 years. The platform features dynamic filtering, a Folium map, and an ML predictor that estimates YOUR chance of winning Olympic medals.
 
-Build Status
+## Motivation
 
-Code Style
-This project follows the PEP 8 coding style for Python.
+The project aims to provide a robust and interactive tool for exploring historical Olympic data, understanding trends, and making predictions. It offers users the ability to delve into the rich history of the Olympics and gain insights into country performances over time.
 
-Screenshots
+## Build Status
 
-Tech/Framework Used
+![Build Status](https://travis-ci.org/yourusername/olympic-maniac.svg?branch=master)
+![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/yourusername/olympic-maniac?branch=master&svg=true)
+
+## Code Style
+
+This project adheres to the PEP 8 code style guidelines.
+
+## Screenshots
+
+<img width="488" alt="Screenshot 2024-07-14 at 6 20 26 PM" src="https://github.com/user-attachments/assets/60d3226e-ab13-46fe-b0f4-7fe615096929">
+
+
+
+## Tech/Framework Used
+
 Built with:
+- Python
+- Pandas
+- Scikit-learn
+- Jupyter Notebook
+- Streamlit
+- Folium
 
-Python
-Streamlit
-Features
-Predicts medal counts for different countries.
-Interactive visualizations of the data.
-Provides insights into factors affecting Olympic performance.
-Code Example
-Here's a brief example of how to use the prediction model:
+## Features
 
-python
-Copy code
-from predict2 import predict_medal_counts
+- Data collection and cleaning with standardized country names using NOC codes
+- Dynamic filtering capabilities for ‘Country Name’ using the Streamlit framework
+- Geospatial visualization with Folium and GeoJSON data
+- Machine learning model to predict medal counts
 
-# Example input data
-input_data = {
-    'GDP': 30000,
-    'Population': 50000000,
-    'Previous Medals': 50
-}
+## Challenges
 
-# Predict medal counts
-predicted_medals = predict_medal_counts(input_data)
-print(predicted_medals)
-Installation
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/yourusername/olympics-medal-prediction.git
-Navigate to the project directory:
-bash
-Copy code
-cd olympics-medal-prediction
-Install the required packages:
-bash
-Copy code
-pip install -r requirements.txt
-Run the Streamlit app:
-bash
-Copy code
-streamlit run app.py
-API Reference
-For detailed API documentation, please refer to the API Reference.
+1. **Data Collection and Cleaning**:
+    - Handling missing values
+    - Standardizing country names using NOC codes
+    - Ensuring consistent formatting across different time periods
+2. **Dynamic Filtering and Interactivity**:
+    - Integrated dynamic filtering capabilities for ‘Country Name’ using Streamlit
+    - Enhanced filtering with the `streamlit_dynamic_filters` library
+3. **Geospatial Visualization**:
+    - Created an interactive choropleth map with Folium
+    - Utilized GeoJSON data for accurate country boundaries
+4. **Performance Optimization**:
+    - Ensured smooth application performance with large datasets and complex visualizations
+    - Optimized data processing and visualization performance with efficient libraries
 
-Tests
-To run the tests, use the following command:
+## Findings
 
-bash
-Copy code
-pytest tests/
-How to Use
-Open the Streamlit app:
-bash
-Copy code
-streamlit run app.py
-Upload the required data files.
-Input the parameters for prediction.
-View the predicted medal counts and visualizations.
-Contribute
-Contributions are welcome! Please read the contributing guidelines first.
+1. **Top Performing Countries**:
+    - Highlighted the top countries (USA, Russia, China) with the most accumulated Olympic medals over the years
+2. **Medal Trends Over Time**:
+    - Observed trends correlating with economic growth and sports infrastructure investment
+3. **Geospatial Insights**:
+    - Geographical patterns in medal distributions with clusters of high-performing countries
+4. **Interactive Exploration**:
+    - Personalized insights through detailed filtering of medal counts by user interests
 
-Credits
-This project is inspired by various data science and machine learning tutorials. Special thanks to Amir at Cornell Tech for guidance on building the data-driven AI function.
 
-License
-MIT © YourName
+
