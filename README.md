@@ -6,20 +6,10 @@
 
 The project aims to provide a robust and interactive tool for exploring historical Olympic data, understanding trends, and making predictions. It offers users the ability to delve into the rich history of the Olympics and gain insights into country performances over time.
 
-## Build Status
-
-![Build Status](https://travis-ci.org/yourusername/olympic-maniac.svg?branch=master)
-![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/yourusername/olympic-maniac?branch=master&svg=true)
-
-## Code Style
-
-This project adheres to the PEP 8 code style guidelines.
 
 ## Screenshots
 
 <img width="488" alt="Screenshot 2024-07-14 at 6 20 26 PM" src="https://github.com/user-attachments/assets/60d3226e-ab13-46fe-b0f4-7fe615096929">
-
-
 
 ## Tech/Framework Used
 
@@ -37,6 +27,9 @@ Built with:
 - Dynamic filtering capabilities for ‘Country Name’ using the Streamlit framework
 - Geospatial visualization with Folium and GeoJSON data
 - Machine learning model to predict medal counts
+
+## Installation
+
 
 ## Challenges
 
@@ -65,5 +58,27 @@ Built with:
 4. **Interactive Exploration**:
     - Personalized insights through detailed filtering of medal counts by user interests
 
+## Installation
 
+Follow these steps to set up the Olympic Maniac project on your local machine:
+
+1. **Clone the repository**:
+   Open your terminal and run the following command to clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/olympic-maniac.git
+   ```
+
+2. **Install dependencies**:
+    Use the following command to install all the required dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+3. **Run the Streamlit app**:
+    Start the Streamlit app using the command below:
+
+    ```bash
+    
+    streamlit run app.py
+    ```
 
